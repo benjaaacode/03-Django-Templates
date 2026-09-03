@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>{% block title %}Django Templates{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'inicio:inicio' %}">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido específico de cada página -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2023 Mi Proyecto</p>
+    </footer>
+</body>
+</html>
